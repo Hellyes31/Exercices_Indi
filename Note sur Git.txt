@@ -1,0 +1,38 @@
+Console : l'infrastructure qui nous permet de communiquer avec l'utilisateur
+Terminal : permet de faire l'hote entre les discussions de la console et de l'utilisateur
+Bash / Shell : langage informatique qui nous permet d'utiliser le terminal e
+CLi : ce qui nous permet de communiquer avec sa machine 
+Linux Commandes :
+echo $0 : le terminal installé sur le pc
+pwd : Print Working Directory // voir le chemin depuis la racine
+Ls : 
+cd : se déplacer dans les dossiers
+r : read
+w : write
+x : execute
+cd -- / cd .. : permet de revenir en arrière dans la branche
+ls -la : affiche plus précisement le contenu d'un dossier ( exemple : droits / dernière date de modification / à quel utilisateur il appartient )
+head 'nom fichier.txt' : permet de lire les premières lignes d'un fichier
+cat 'nom fichier.txt' : permet de lire l'intégralité du contenu d'un fichier
+rm : remove // permet de supprimer un fichier - un dossier !!!!!!!! faire très attention
+touch nom fichier.txt : permet de créer un fichier avec le nom donné
+cp 'nom fichier.txt' 'nom dossier' : permet de copier un fichier d'un dossier dans un autre dossier
+mv 'nom fichier.txt
+ctrl + c : permet de finir la commande shell 
+mkdir : make directory // créer un dossier
+date : affiche la date interne du pc
+clear : supprime toutes les commandes tapées
+start : permet d'ouvrir un lien
+help : permet de voir le fonctionnement d'une commande et les options disponibles
+nano 'nom fichier' : permet d'ouvrir le menu édition d'un fichier ( jécris depuis le terminal )
+dossier . est l'enfant du dossier .. ( il est notre dossier actuel )
+exit : permet de  fermer la console
+.. : représente le dossier d'avant dans la branche ------> marche avec cp 'fichier' .. ( copie le fichier dans le dossier parent )
+
+
+Pour envoyer dans git hub : 
+se positioner dans le dossier qu'on a cloné et ensuite envoyer tout ça :
+
+git add . : modifie tout les fichiers 
+git commit - m "1er changement" ou "exercice terminé"
+git push
