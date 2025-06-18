@@ -32,20 +32,19 @@ function didIWin(givenNumber){
 
     if (givenNumber < askedNumber){
         min = givenNumber
-
-        IdH1.innerText = "Plus grand ! Try : " + count++
+        IdH1.innerText = "Plus grand ! Nombre de tentative : " + count++
         updateRangeDisplay()
         return false
     }
 
     if (givenNumber > askedNumber){
         max = givenNumber
-        IdH1.innerText = "Plus petit ! Try : " + count++
+        IdH1.innerText = "Plus petit ! Nombre de tentative : " + count++
         updateRangeDisplay()
         return false
     }
   else {
-    IdH1.innerText = "Bravo ! Vous avez deviné le nombre ! Try : " + count
+    IdH1.innerText = "Bravo ! Vous avez deviné le nombre ! Nombres de tentatives : " + count
     return  true
 }
 }
