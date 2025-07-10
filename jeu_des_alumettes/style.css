@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: rgb(48,8,8);
+  animation: animate 2s infinite alternate linear;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    /* position: absolute; */
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+#Jeu {
+  margin-top: 15vh;
+  margin-left: 30vw;
+  font-size: 30px;
+  display: none;
+  gap: 80px;
+  text-align: center;
+  align-items : center;
+}
+
+h3{
+  position: absolute;
+  left: 0;
+}
+#inputPlayer{
+    /* background-image: radial-gradient(rgb(255, 80, 0) 20%, rgba(255, 80, 0, 0) 70%); */
+    padding: 13px 0px;
+    border: none;
+    border-radius: 30px;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 17vh;
+    margin-left: 40vw;
+    font-size: 30px;
+    gap: 80px;
+    display: inline-flex;
+    text-align: center;
+    align-items : center;
+}
+#ciaoAllumettes {
+    /* padding: 23px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 2vh;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4); */
+    /* background-image: radial-gradient(rgb(255, 80, 0) 20%, rgba(255, 80, 0, 0) 70%); */
+    padding: 13px 0px;
+    border: none;
+    border-radius: 30px;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: 100;
+}
+
+#fire{
+    position: absolute;
+    bottom: 18%;
+    left: 46.5%;
+    padding: 23px 49px;
+    background: linear-gradient(45deg, #ff4500, #ff7e00);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 10;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+    overflow: hidden;
+ }
+#fire:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,69,0,0.6)
+}
+#startFire{
+    position: absolute;
+    bottom: 16%;
+    left: 46.5%;
+    padding: 23px 49px;
+    background: linear-gradient(45deg, #ff4500, #ff7e00);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 10;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+    overflow: hidden;
+ }
+ #startFire:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,69,0,0.6)
+}
+.fire {
+  font-size: 24px;
+  /* filter: blur(0.02em); 
+  -webkit-filter: blur(0.02em);  */
+  margin: 3em auto 0 auto;
+  position: relative;
+  width: 10em;
+  height: 12em;
+}
+.particle {
+  animation: rise 1s ease-in infinite;
+  background-image: radial-gradient(rgb(255, 80, 0) 20%, rgba(255, 80, 0, 0) 70%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 5em;
+  height: 5em;
+}
+ @keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10em) scale(0);
+  }
+} 
+
+@keyframes  animate {
+  0% {
+    text-shadow:
+      0 3px 20px red,
+      0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;
+  }
+  25% {
+    text-shadow:
+      0 3px 20px red,
+      0 0 30px red,
+      0 0 20px orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow;
+  }
+  50% {
+    text-shadow:
+      0 3px 20px red,
+      0 0 20px red,
+      0 -5px 10px orange,
+      -2px -5px 5px yellow,
+      3 -10px 10px yellow,
+      -4px -15px 20px yellow,
+      2px -20px 30px rgba(255,255,0,0.5);
+  }
+  75% {
+    text-shadow:
+      0 3px 20px red,
+      0 0 20px red,
+      0 -5px 10px orange,
+      3 -5px 5px yellow,
+      -4px -10px 10px yellow,
+      2px -20px 30px rgba(255,255,0,0.5),
+      0 -25px 40px rgba(255,255,0,0);
+  }
+  100% {
+    text-shadow:
+      0 3px 20px red,
+      0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;
+  }
+}

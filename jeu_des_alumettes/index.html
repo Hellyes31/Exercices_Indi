@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer></script>
+
+    <link defer rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1 id="Titre">Jeu des ALLUMETTES</h1>
+
+    <h2 id="feedBack1"></h2>
+    <h2 id="feedBack"></h2>
+    <h2 id="player">Nombre de joueur :</h2>
+    <div id="setupGame">
+      <input type="number" id="inputPlayer" name="ciaoAllumettes"  minlength="4" maxlength="8"  size="10" min="2" value="2" />
+      <input type="button" id="startFire" value="Burn" />
+    </div>
+    <div id="Jeu">
+        <h3 id="whichPlayer">Joueur :</h3>
+        <label for="ciaoAllumettes">BURNNN</label>
+        <input type="number" id="ciaoAllumettes" name="ciaoAllumettes"  minlength="4" maxlength="8"  size="10" />
+        <p>allumette(s)</p>
+        <input type="button" id="fire" value="Burn" >
+    </div>
+    <div class="fire" id="fire-container"></div>
+
+      <script>
+    const container = document.getElementById('fire-container');
+    const parts = 50;
+
+    for (let i = 0; i < parts; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `calc((100% - 5em) * ${i / parts})`;
+      particle.style.animationDelay = `${Math.random()}s`;
+      container.appendChild(particle);
+    }
+  </script>
+        <script src="script.js" defer></script>
 </body>
 </html>
