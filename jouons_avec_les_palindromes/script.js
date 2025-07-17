@@ -10,9 +10,9 @@
 // Vous aurez probablement besoin de créer une autre fonction maxDaysInMonth pour vous assurer que le nombre de jours par mois est valide
 //(ex: le 31/11 n’est pas valide, le mois de novembre ne contient que 30 jours)
 
-let numberDays = 29
+let numberDays = 11
 let numberMonth = 2
-let numberYears = 2012
+let numberYears = 2011
 
 
 //Nombre de jour exact dans les mois
@@ -94,10 +94,41 @@ function isValidDate(){
     const y = isValidYears(numberYears)
     if(d.isValid && m.isValid && y.isValid){
         console.log(`${d.formatted}/${m.formatted}/${y.formatted}`)
+        return (`${d.formatted}${m.formatted}${y.formatted}`)
     }
     else{
         console.log("La date est invalide")
     }
 }
 
-isValidDate()
+
+
+// console.log(isValidDate())
+
+//*********************Etape.1*********************
+
+// Créer une fonction isPalindrome qui prend une date en string en paramètre et retourne un booléen qui indique si la date est un palindrome. Si la date est invalide, retourner false.
+
+// Exemple de date palindrome: 11/02/2011. Les caractères / ne sont pas pris en compte.
+
+// isPalindrome("11/02/2011") // true
+// isPalindrome("03/04/2001") // false
+
+function isPalindrome(date){
+    if (!date || typeof date !== "string") {
+        return "Non";
+    }
+
+    // Retire tous les caractères non numériques si besoin (ex: "/" ou "-")
+    let cleanDate = date.replace(/\D/g, "");
+
+    // .split transforme la chaine en tableau .reverse inverse le tableau le premier en dernier ect et le .join retransforme, colle les eléments en strings
+    let reversed = cleanDate.split('').reverse().join('');
+
+    // Vérifier si c'est un palindrome
+    return cleanDate === reversed;
+    }
+
+const validDate = isValidDate(); 
+console.log(isPalindrome(validDate)); // true ou false
+
