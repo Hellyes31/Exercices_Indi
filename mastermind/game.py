@@ -1,7 +1,7 @@
-print("Le but de l'exercice est de deviner les 2 pions d'une couleur différentes, vous avez 12 essais pour trouver la bonne combinaison.\nVous avez le choix entre 8 couleurs: red, purple, blue, green, yellow, brown, pink, white.\nBon courage")
+print("Le but de l'exercice est de deviner les 2 pions d'une couleur différentes, vous avez 12 essais pour trouver la bonne combinaison.\nVous avez le choix entre 8 couleurs: red, purple, blue, green, yellow, brown, pink, white. Attention la couleur pourrait être la même.\nBon courage")
 
 def mastermind():
-    answer = ["purple", "green","yellow","brown"]
+    answer = ["yellow", "green","yellow","brown"]
     color = {"red", "purple", "blue", "green","yellow","brown","pink","white"}  
     attempts = 0
     max_attempts = 12
@@ -12,7 +12,7 @@ def mastermind():
         guess_list = [c.strip().lower() for c in guess.split(",") if c.strip()]
 
         if len(guess_list) != 4 :
-            print("Erreur : vous devez entrer exactement 2 couleurs.")
+            print("Erreur : vous devez entrer exactement 4 couleurs.")
             continue
 
         if not all (c in color for c in guess_list):
