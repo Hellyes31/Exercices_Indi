@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess A Number</title>
+    
     <script defer src="ExGuessANumber.js"></script>
-    <!-- <script defer src="BrouillonGuess.js"></script> -->
+    <link defer href="ExGuess.css" rel="stylesheet" />
+    
 </head>
 <body>
+
     <h1 id="joker">🎡 C'EST PARTI C'EST PARTI POUR LA DEVINETTE MON COPAIN 🎡 </h1>
-    <h2 id="minus" style="display: inline">0</h2><h2  style="display: inline"> < <input type="number" id="game" name="gamble" min="0" max="50"/> < </h2><h2 id="max" style="display: inline"> 50 </h2>
+    <h2 id="minus" style="display: inline">0</h2><h2  style="display: inline"> < <input type="number" id="game" name="gamble" min="0" max="50"/> < </h2><h2 id="max" style="display: inline"> 50 <br></h2>
+    <div id="gifTrain"></div>
+    <button onclick="startAnemone()" id="guess">Guess !</button>
+    <div id="tsparticles"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     
-    <button id="guess">Guess !</button>
 </body>
 </html>

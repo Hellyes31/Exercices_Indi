@@ -14,6 +14,7 @@ let numberDays = 11
 let numberMonth = 2
 let numberYears = 2011
 
+const validDate = isValidDate();
 
 //Nombre de jour exact dans les mois
 function maxDaysInMonth(){
@@ -105,7 +106,7 @@ function isValidDate(){
 
 // console.log(isValidDate())
 
-//*********************Etape.1*********************
+//*********************Etape.2*********************
 
 // Créer une fonction isPalindrome qui prend une date en string en paramètre et retourne un booléen qui indique si la date est un palindrome. Si la date est invalide, retourner false.
 
@@ -116,10 +117,13 @@ function isValidDate(){
 
 function isPalindrome(date){
     if (!date || typeof date !== "string") {
-        return "Non";
+        return false;
     }
 
-    // Retire tous les caractères non numériques si besoin (ex: "/" ou "-")
+    // Explication du replace :
+    // le : /.../	Délimite l'expression régulière 
+    // le : \D	Match tout ce qui n’est pas un chiffre (l’inverse de \d) 
+    // le : g	"global" flag → applique la règle à tous les caractères trouvés, pas juste le premier
     let cleanDate = date.replace(/\D/g, "");
 
     // .split transforme la chaine en tableau .reverse inverse le tableau le premier en dernier ect et le .join retransforme, colle les eléments en strings
@@ -129,6 +133,44 @@ function isPalindrome(date){
     return cleanDate === reversed;
     }
 
-const validDate = isValidDate(); 
-console.log(isPalindrome(validDate)); // true ou false
+//  console.log(isPalindrome(todayDate)); // true ou false
 
+
+
+//*********************Etape.3*********************
+// Créer une fonction getNextPalindromes qui donne les x prochaines dates palindromes à compter d’aujourd’hui. La fonction prendra le x en paramètre.
+
+function formatDate(date) {
+    let day = date.getDate();
+    let month = date.getMonth() + 1; // Mois commence à 0
+    let year = date.getFullYear();
+
+    // Formatage pour avoir toujours 2 chiffres pour jour/mois
+    if (day < 10) day = "0" + day;
+    if (month < 10) month = "0" + month;
+
+    return `${day}/${month}/${year}`;
+}
+
+function getNextPalindromes(x) {
+    let palindromes = [];
+    let currentDate = new Date();
+
+    // Commencer à partir de demain
+    currentDate.setDate(currentDate.getDate() + 1);
+
+    while (palindromes.length < x) {
+        let formatted = formatDate(currentDate);
+        if (isPalindrome(formatted)) {
+            palindromes.push(formatted);
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+
+    console.log(`Les ${x} prochaines dates palindromes sont :`);
+    console.log(palindromes);
+    return palindromes;
+}
+
+// Exemple d’utilisation
+getNextPalindromes(10);

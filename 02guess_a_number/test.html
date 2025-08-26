@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation Sea Anemone</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: none;
+    }
+
+    #content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <!-- CHARGEMENT DE TSPARTICLES AVEC LE PRESET -->
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-sea-anemone@3/tsparticles.preset.seaAnemone.bundle.min.js"></script>
+</head>
+<body>
+
+  <div id="tsparticles"></div>
+
+  <div id="content">
+    <h1>Tester l’animation Sea Anemone</h1>
+    <button onclick="startAnemone()">Lancer l'animation</button>
+  </div>
+
+  <script>
+    async function startAnemone() {
+      const container = document.getElementById('tsparticles');
+      container.style.display = 'block';
+
+      // ✅ C'est cette fonction qu'il faut utiliser pour les presets
+      await tsParticles.loadPreset("tsparticles", "seaAnemone");
+    }
+    startAnemone()
+  </script>
+
+</body>
+</html>

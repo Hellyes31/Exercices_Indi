@@ -1,0 +1,34 @@
+@font-face {
+    font-family : Party Vibes;
+    src: url("C:/Users/elies/Desktop/Font-Family/Party Vibes/Party Vibes.otf");
+}
+body,html {
+    text-align: center;
+    font-family: Party Vibes ;
+    font-size: 30px;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("C:/Users/elies/Desktop/Images code/pexels-scottwebb-136412.jpg");
+}
+
+#guess{
+    background-color: rgb(50, 207, 50);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 32px;
+    border:none;
+    cursor: pointer;
+}
+#tsparticles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+
+
+
