@@ -15,14 +15,8 @@ def random_combinaison():
 
 # print(f"La combinaison aléatoire est : {answer}")
 #Fonction du jeu
-# Enoncé du jeu
-print(f"Le but de l'exercice est de deviner les 4 pions d'une couleur différentes, vous avez 12 essais pour trouver la bonne combinaison.\nVous avez le choix entre 8 couleurs: red, purple, blue, black, yellow, brown, pink, white. Attention la couleur pourrait être la même.\nBon courage")
- 
-
-#Fonction du jeu
 def mastermind():
-    answer = ["yellow", "green","yellow","brown"]
-    color = {"red", "purple", "blue", "green","yellow","brown","pink","white"}  
+    random_combinaison()
     attempts = 0
     max_attempts = 12
 #Gestion du jeu, si c'est la mauvaise synthaxe ou gagné 
