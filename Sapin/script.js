@@ -49,5 +49,6 @@ function afficherPointeSapin(hauteur, backspace) {
 }
 
 afficherPointeSapin(5,10)
+afficherPointeSapin(10,10)
 
 
