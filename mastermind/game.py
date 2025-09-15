@@ -17,16 +17,13 @@ label = customtkinter.CTkLabel(
     my_mastermind, 
     text="Le but de l'exercice est de deviner les 4 pions d'une couleur différentes, vous avez 12 essais pour trouver la bonne combinaison.\nVous avez le choix entre 8 couleurs: red, purple, blue, black, yellow, brown, pink, white. Attention la couleur pourrait être la même.\nBon courage",
     anchor="center", 
+    wraplength=380,
     justify="center"
     )
 
 # sticky="new" colle et s'aligne à gauche(E) et à droite(W)
-label.grid(row=0, column=0, sticky="new", pady=(10), padx=(10))
+label.grid(row=0, column=0, columnspan=2, sticky="new", pady=(10), padx=(10))
 
-def resize_label(event):
-    label.configure(wraplength=event.width - 20)
-    
-my_mastermind.bind("<Configure>", resize_label)
 
 # Les 4 combobox en bas
 values = ["red","purple","blue","black","yellow","brown","pink","white"]
