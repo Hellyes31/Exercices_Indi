@@ -40,15 +40,63 @@
 
 //Etape 1 fini :
 
-function afficherPointeSapin(hauteur, backspace) {
+// function afficherPointeSapin(hauteur, backspace) {
 
+//   console.log(`${" ".repeat(backspace + 1)}+`);
+//   for (let i = 0; i <= hauteur - 1; i++) {
+//     console.log(`${" ".repeat(backspace - i)}/${"*".repeat(i)}|${"*".repeat(i)}\\`);
+//   }
+// }
+
+// afficherPointeSapin(5,10)
+// afficherPointeSapin(10,10)
+
+// function afficherPointeSapin(etage, etageHauteur, backspace) {
+//   let dernierI = 0;
+//   console.log(`${" ".repeat(backspace + 1)}+`);
+//   for (let y = 1; y <= etage; y++) {
+//     for (let i = 0; i <= etageHauteur - 1; i++) {
+//       if (y === 1) {
+//         console.log(
+//           `${" ".repeat(backspace - i)}/${"*".repeat(i)}|${"*".repeat(i)}\\`
+//         );
+//       } else {
+//         console.log(
+//           `${" ".repeat(backspace - dernierI)}/${"*".repeat(
+//             dernierI
+//           )}|${"*".repeat(dernierI)}\\`
+//         );
+//       }
+
+//       if (i == etageHauteur - 1) {
+//         dernierI += i;
+//       }
+//     }
+//   }
+// }
+
+// afficherPointeSapin(3, 3, 10);
+
+function afficherPointeSapin(etage, etageHauteur, backspace) {
+  let tronc = 3;
+  let dernierI = 0;
   console.log(`${" ".repeat(backspace + 1)}+`);
-  for (let i = 0; i <= hauteur - 1; i++) {
-    console.log(`${" ".repeat(backspace - i)}/${"*".repeat(i)}|${"*".repeat(i)}\\`);
+
+  for (let y = 1; y <= etage; y++) {
+    for (let i = 0; i <= etageHauteur - 1; i++) {
+      let valeurI = dernierI + i;
+
+      console.log(
+        `${" ".repeat(backspace - valeurI)}/${"*".repeat(valeurI)}|${"*".repeat(
+          valeurI
+        )}\\`
+      );
+    }
+
+    dernierI += etageHauteur - 1;
+  }
+  for (let t = 1; t <= tronc; t++) {
+    console.log(`${" ".repeat(backspace)}###`);
   }
 }
-
-afficherPointeSapin(5,10)
-afficherPointeSapin(10,10)
-
-
+afficherPointeSapin(5, 3, 10);
