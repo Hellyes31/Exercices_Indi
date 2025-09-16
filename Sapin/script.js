@@ -76,6 +76,19 @@
 // }
 
 // afficherPointeSapin(3, 3, 10);
+function randomDecoration(){
+    random = Math.random()
+
+    if (random < 0.7){
+        return "*"
+    } else if (random < 0.85){
+        return "+"
+    } else {
+        return "o"
+    }
+
+}
+console.log(randomDecoration())
 
 function afficherPointeSapin(etage, etageHauteur, backspace) {
   let tronc = 3;
