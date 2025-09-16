@@ -79,9 +79,9 @@
 function randomDecoration(){
     random = Math.random()
 
-    if (random < 0.7){
+    if (random < 0.6){
         return "*"
-    } else if (random < 0.85){
+    } else if (random < 0.80){
         return "+"
     } else {
         return "o"
