@@ -24,9 +24,7 @@ function afficherPointeSapin(etage, etageHauteur, backspace) {
       let left = "";
       for (let r = 0; r < valeurI; r++) right += randomDecoration();
       for (let l = 0; l < valeurI; l++) left += randomDecoration();
-      console.log(
-        `${" ".repeat(backspace - valeurI)}/${left}|${right}\\`
-      );
+      console.log(`${" ".repeat(backspace - valeurI)}/${left}|${right}\\`);
     }
 
     dernierI += etageHauteur - 1;
